@@ -94,12 +94,12 @@ def Coin_converter(coin_name="BTC", quantity=1, to_currency="USD", amount=1):
             if amount == 1:
                 price_for_one = element["quote"]['USD']["price"]
                 coin_name_ = element["name"]
-                price_for_input = round(float(amount) / float(price_for_one), 5)
+                price_for_input = round(float(amount) / float(price_for_one), 6)
                 # return (f"1 {coin_name_} is currently trading at ${price_for_one}USD")
-                return round(price_for_input, 5)
+                return round(price_for_input, 6)
             else:
                 price_for_one = element["quote"]['USD']["price"]
-                price_for_input = round(float(amount) / float(price_for_one), 5)
+                price_for_input = round(float(amount) / float(price_for_one), 6)
 
                 coin_name_ = element["name"]
                 # return (f" ${amount} USD is currently {price_for_input} {coin_name_}")
